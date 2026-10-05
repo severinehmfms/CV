@@ -1,0 +1,227 @@
+{
+  "personal": {
+    "firstName": "Séverine",
+    "lastName": "HORI MAITREHUT",
+    "jobTitle": "Développeuse Java Python PHP",
+    "email": "severine.hori.maitrehut@fms-ea.com",
+    "phone": "06 01 02 03 04",
+    "city": "Biaudos",
+    "website": "",
+    "linkedin": "",
+    "github": "https://github.com/severinehmfms"
+  },
+
+  "profile": "Développeuse informatique expérimentée, je prépare actuellement le titre Concepteur Développeur d'Applications (Java, Python) afin d'actualiser mes compétences. Autonome et rigoureuse, je souhaite contribuer à des projets de développement en m'appuyant sur mon expérience en Java/J2EE, PHP, bases de données et applications web.",
+
+  "skills": [
+    {
+      "name": "Java",
+      "level": "Intermédiaire"
+    },
+    {
+      "name": "Spring boot",
+      "level": "Débutant"
+    },
+    {
+      "name": "Hibernate",
+      "level": "Débutant"
+    },
+    {
+      "name": "Python",
+      "level": "Intermédiaire"
+    },
+    {
+      "name": "Django",
+      "level": "Intermédiaire"
+    },
+    {
+      "name": "PHP",
+      "level": "Intermédiaire"
+    },
+    {
+      "name": "HTML / CSS",
+      "level": "Intermédiaire"
+    },
+    {
+      "name": "JavaScript",
+      "level": "Intermédiaire"
+    },
+    {
+      "name": "SQL",
+      "level": "Intermédiaire"
+    },
+    {
+      "name": "Git",
+      "level": "Débutant"
+    }
+  ],
+
+  "experiences": [
+    {
+      "position": "Conceptrice Développeuse d'Applications",
+      "company": "FMS",
+      "location": "Saint-geours-de-maremne",
+      "startDate": "2026-06",
+      "endDate": "2026-06",
+      "description": "Formation conception et développement d'applications : développement Java/Python",
+      "technologies": [
+        "Java",
+        "Python",
+        "Sql",
+        "Git",
+        "Django",
+        "Spring boot",
+        "UML",
+        "Algorithmique"
+      ]
+    },
+    {
+      "position": "Ingénieure territorial",
+      "company": "SICTIAM",
+      "location": "Vallauris",
+      "startDate": "2009-09",
+      "endDate": "2013-10",
+      "description": "Analyse, conception et développement d'applications et de modules métiers pour le SICTIAM et ses collectivités adhérentes. Développements principalement en PHP/XOOPS",
+      "technologies": [
+        "PHP",
+        "Xoops",
+        "Javascript",
+        "Jquery",
+        "Java",
+        "Sql",
+        "Flux XML XSLT"
+      ]
+    },
+     {
+      "position": "Développeuse Java/J2EE",
+      "company": "Dev 1.0",
+      "location": "Bidart",
+      "startDate": "2007-07",
+      "endDate": "2008-08",
+      "description": "Développements et maintenance évolutive d'applications web Java/J2EE dans le cadre de projets variés.",
+      "technologies": [
+        "Java",
+        "J2EE",
+        "JSF",
+        "Hibernate",
+        "SQL"
+      ]
+    },
+     {
+      "position": "Assistante ingénieur",
+      "company": "INRA",
+      "location": "Sophia-Antipolis",
+      "startDate": "2006-12",
+      "endDate": "2006-12",
+      "description": "Développement d'un plugin Java pour ImageJ dans le cadre d'un projet de recherche scientifique.",
+      "technologies": [
+        "Java"
+      ]
+    },
+     {
+      "position": "Correspondante informatique",
+      "company": "Centre d'examens de santé",
+      "location": "Poitiers",
+      "startDate": "2005-11",
+      "endDate": "2006-08",
+      "description": "Conception et développement d'une application Intranet sécurisée dédiée à la gestion du parc informatique et des stocks, en complément des missions du poste.",
+      "technologies": [
+        "PHP",
+        "HTML/CSS",
+        "Access"
+      ]
+    },
+     {
+      "position": "Gestionnaire d'applications",
+      "company": "Société Généale",
+      "location": "Tigery",
+      "startDate": "2002-09",
+      "endDate": "2005-08",
+      "description": "Gestion des référentiels de données et développement d'un site Intranet ainsi que d'un site interne de mise à disposition de la base de connaissances.",
+      "technologies": [
+        "ASP",
+        "HTML"
+      ]
+    }
+  ],
+
+  "education": [
+    {
+      "degree": "Titre Concepteur et developeur d’applications Java-Python",
+      "school": "FMS",
+      "location": "Saint-geours-de-maremne",
+      "startDate": "2026-06",
+      "endDate": "2026-12",
+      "description": "Formation dans le but d’obtenir le titre RNCP 37873 de niveau 6."
+    },
+    {
+      "degree": "DEST Ingénierie et integration informatique",
+      "school": "Conservatoire National des Arts et Métiers",
+      "location": "Melun",
+      "startDate": "2003-09",
+      "endDate": "2006-06",
+      "description": ""
+    },
+    {
+      "degree": "BTS Informatique de Gestion",
+      "school": "Lycée Léonard de Vinci",
+      "location": "Melun",
+      "startDate": "2000-09",
+      "endDate": "2002-07",
+      "description": "Option développeur d'applications"
+    },
+     {
+      "degree": "BAC STT",
+      "school": "Lycée Flora Tristan",
+      "location": "Varennes-sur-Seine",
+      "startDate": "1998-09",
+      "endDate": "2000-07",
+      "description": "Spécialité : Informatique et Gestion"
+    }
+  ],
+
+  "projects": [
+    {
+      "name": "Document Unique - SICTIAM",
+      "description": "Conception et développement d'un module métier d'évaluation des risques professionnels avec génération du document réglementaire.",
+      "technologies": [
+        "PHP",
+        "XOOPS",
+        "Mysql"
+      ],
+      "github": ""
+    },
+    {
+      "name": "STELA Archivage - SICTIAM",
+      "description": "Développement de modules d'archivage et de webservices pour l'échange de données avec les collectivités (protocole SEDA).",
+      "technologies": [
+        "PHP",
+        "XOOPS",
+        "MySql",
+        "Flux XML/XSLT"
+      ],
+      "github": ""
+    }
+  ],
+
+  "languages": [
+    {
+      "name": "Français",
+      "level": "Langue maternelle"
+    },
+    {
+      "name": "Anglais",
+      "level": "B1.2"
+    },
+    {
+      "name": "Espagnol",
+      "level": "Notions"
+    }
+  ],
+
+  "interests": [
+    "Intelligence artificielle",
+    "Généalogie et généalogie génétique",
+    "Sport"
+  ]
+}
