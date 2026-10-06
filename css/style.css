@@ -1,0 +1,84 @@
+* {
+    /*box-sizing: border-box; : si je dis width: 90% et que j'ajoute du padding, le padding est compris dans les 90%.*/
+    box-sizing: border-box;
+}
+
+body {
+	line-height: 1;
+    background: #DCDCDC;
+}
+
+header {  
+    color: #808080;
+
+    width: 90%;
+    max-width: 90%;
+    /*Marges haut, côtés, bas */
+    margin: 30px auto 15px;
+
+    padding: 0 20px;
+}
+header h1 {
+    margin: 0;
+    font-size: 42px;
+}
+header h2 {
+    margin: 10px 0 10px;
+    font-weight: normal;
+}
+.photo{    
+    text-align  :center; /* Pour aligner la photo */
+    /*background: #FFB6C1;*/
+}
+img{
+    width: 40%;
+    height: auto;
+
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.style-flex {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 30px;
+}
+
+.bande-gauche{
+    /*width: 30%;*/
+    flex: 3;
+}
+
+aside {
+    /*width: 30%;*/
+    flex: 3;
+}
+
+.bande-droite {
+    /*width: 70%;*/
+    text-align:left;
+    flex: 7;
+}
+
+main {
+    width: 90%;
+    max-width: 90%;
+    background: white;
+
+    padding-top: 10px;
+    margin: 0 auto;
+}
+
+section {
+    background: #D8BFD8;
+    padding: 15px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+section h2 {
+    margin-top: 0;
+    border-bottom: 2px solid #263238;
+    padding-bottom: 10px;
+}
