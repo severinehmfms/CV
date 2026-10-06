@@ -23,6 +23,9 @@ async function main() {
 
     console.log(cv);
 
+    //textContent → récupère/modifie le texte brut
+    //innerText → innerText représente davantage le texte visible pour l'utilisateur. (avec les balises)
+
     //Informations personnelles
     //Cherche dans le HTML l'élément qui possède id="full-name" et on met dedans nom et prénom
     document.getElementById("nom").textContent = `${cv.personal.firstName} ${cv.personal.lastName}`;
@@ -31,6 +34,11 @@ async function main() {
     document.getElementById("email").textContent = cv.personal.email;
     document.getElementById("ville").textContent = cv.personal.city;
 
+    //Partie description
+    afficheDescription(cv.profile);
+
+    //Partie compétences
+    afficheCompetences(cv.skills);
 
     //const nomElement = document.createElement("h2");
     //nomElement.innerText = cv.firstName;
@@ -41,6 +49,35 @@ async function main() {
     // displayPersonalInfo(cv.personal);
     // displaySkills(cv.skills);
     // displayExperiences(cv.experiences);
+}
+
+//Fonctions pour charger les éléments suivant le type (pour réduire un peu le main)
+function afficheDescription(profile) {
+    const container = document.querySelector("#description");
+    container.textContent = profile;
+}
+
+function afficheCompetences(skills) {
+
+    //const container = document.getElementById("competences");
+    const container = document.querySelector("#competences");
+
+    skills.forEach(function(skill) {
+
+        const element = document.createElement("div");
+
+        //Si on a besoin de rajouter une classe pour le style 
+        //element.classList.add("skill");
+
+        element.textContent = skill.name + " - " + skill.level;
+
+        /*
+        element.innerHTML = `
+            <strong>${skill.name}</strong>
+            <span>${skill.level}</span>
+        `;*/ 
+        container.appendChild(element);
+    });
 }
 
 main();
