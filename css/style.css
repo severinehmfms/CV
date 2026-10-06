@@ -82,3 +82,22 @@ section h2 {
     border-bottom: 2px solid #263238;
     padding-bottom: 10px;
 }
+
+.classe-bouton {
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/*On masque par défaut le contenu des grandes zones*/
+#formations,
+#experiences,
+#projets {
+    display: none;
+}
+
+#formations.visible,
+#experiences.visible,
+#projets.visible {
+    display: block;
+}
