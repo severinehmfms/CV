@@ -5,16 +5,66 @@
 </head>
 
 <body>
-    <h1> MON CV </h1>
     <!-- On va mettre ici les blocs pour mon CV et on va essayer de récupérer le contenu du JSON -->
-    <section id="profile-section" class="sectionprofile">
-        <div id="profile"></div>
-    </section>
+    <header class="style-flex">
+        <div class = "bande-gauche">        
+            <div class = "photo">
+                <img src="image.webp"/>
+            </div>
+        </div>
+        <div class = "bande-droite">     
+            <div class="identite">
+                <h1 id="nom"></h1>
+                <p id="titre"></p>
+            </div>
+            <div class="contact">
+                <p id="email"></p>
+                <p id="phone"></p>
+                <p id="ville"></p>
+            </div>
+        </div>
+    </header>
 
+    <main class = "style-flex">
+        <aside>
+            <section id="section-description">
+                <div id="description"></div>
+            </section>
+            <section id="section-competences">
+                <h2>Compétences</h2>
+                <div id="competences"></div>
+            </section>
+            <section id="section-langues">
+                <h2>Langues</h2>
+                <div id="langues"></div>
+            </section>
+            <section id="section-interets">
+                <h2>Centres d'intérêts</h2>
+                <div id="interets"></div>
+            </section>    
+        </aside>       
 
+        <div class="bande-droite">
+            <section id="section-formations">
+                <h2>Formations</h2>
+                <div id="formations"></div>            
+            </section>
+            <section id="section-experiences">
+                <h2>Expériences</h2>
+                <div id="experiences"></div>
+            </section>
+            <section id="section-projets">
+                <h2>Projets</h2>
+                <div id="projets"></div>
+            </section>
+        </div>  
 
+    </main>
 
-
+    <footer>
+        <p>© 2026 Séverine HM</p>
+    </footer>
     <script src="js/script.js"></script>
 </body>
+
 </html>
