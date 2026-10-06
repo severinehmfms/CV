@@ -9,7 +9,7 @@
     <header class="style-flex">
         <div class = "bande-gauche">        
             <div class = "photo">
-                <img src="image.webp"/>
+                <img src="img/image.webp"/>
             </div>
         </div>
         <div class = "bande-droite">     
@@ -26,10 +26,7 @@
     </header>
 
     <main class = "style-flex">
-        <aside>
-            <section id="section-description">
-                <div id="description"></div>
-            </section>
+        <aside>            
             <section id="section-competences">
                 <h2>Compétences</h2>
                 <div id="competences"></div>
@@ -40,31 +37,37 @@
             </section>
             <section id="section-interets">
                 <h2>Centres d'intérêts</h2>
-                <div id="interets"></div>
+                <div id="interets" class="blocElements"></div>
             </section>    
         </aside>       
 
         <div class="bande-droite">
-            
+            <section id="section-description">
+                <div class="titre-section">
+                    <h2>Présentation</h2>
+                </div>
+                <div id="description"></div>
+            </section>
+
             <section id="section-formations">
                 <div class="titre-section">
-                    <h2>Formations <span id="bouton-formations" class="classe-bouton">+</span></h2>
+                    <h2>Formations <span id="bouton-formations" class="classe-bouton">-</span></h2>
                 </div>
-                <div id="formations"></div>            
+                <div id="formations" class="visible"></div>            
             </section>
 
             <section id="section-experiences">
                 <div class="titre-section">
-                    <h2>Expériences <span id="bouton-experiences" class="classe-bouton">+</span></h2>
+                    <h2>Expériences <span id="bouton-experiences" class="classe-bouton">-</span></h2>
                 </div>
-                <div id="experiences"></div>
+                <div id="experiences" class="visible"></div>
             </section>
             
             <section id="section-projets">
                 <div class="titre-section">
-                    <h2>Projets <span id="bouton-projets" class="classe-bouton">+</span></h2>
+                    <h2>Projets <span id="bouton-projets" class="classe-bouton">-</span></h2>
                 </div>                
-                <div id="projets"></div>
+                <div id="projets" class="visible"></div>
             </section>
         </div>
     </main>

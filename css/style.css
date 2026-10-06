@@ -9,8 +9,6 @@ body {
 }
 
 header {  
-    color: #808080;
-
     width: 90%;
     max-width: 90%;
     /*Marges haut, côtés, bas */
@@ -28,7 +26,6 @@ header h2 {
 }
 .photo{    
     text-align  :center; /* Pour aligner la photo */
-    /*background: #FFB6C1;*/
 }
 img{
     width: 40%;
@@ -63,14 +60,13 @@ aside {
 main {
     width: 90%;
     max-width: 90%;
-    background: white;
 
     padding-top: 10px;
     margin: 0 auto;
 }
 
 section {
-    background: #D8BFD8;
+    background: #F5F5F5;
     padding: 15px;
     margin-bottom: 25px;
     border-radius: 8px;
@@ -89,15 +85,52 @@ section h2 {
     cursor: pointer;
 }
 
-/*On masque par défaut le contenu des grandes zones*/
-#formations,
-#experiences,
-#projets {
-    display: none;
-}
-
 #formations.visible,
 #experiences.visible,
 #projets.visible {
     display: block;
+}
+
+#formations.invisible,
+#experiences.invisible,
+#projets.invisible {
+    display: none;
+}
+
+/*Partie Contact et icônes*/
+.icone{
+    width:20px;
+    height: auto;
+}
+.contact{
+    display: flex;
+    gap: 50px;
+}
+
+/*Partie Compétences*/
+#competences {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
+}
+.skill {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    background: #f5f5f5;
+    border-radius: 5px;
+}
+
+/*Partie Centres d'intérêts*/
+.blocElements {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.element {
+    background: #263238;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 14px;
 }

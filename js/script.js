@@ -30,9 +30,15 @@ async function main() {
     //Cherche dans le HTML l'élément qui possède id="full-name" et on met dedans nom et prénom
     document.getElementById("nom").textContent = `${cv.personal.firstName} ${cv.personal.lastName}`;
     document.getElementById("titre").textContent = cv.personal.jobTitle;
-    document.getElementById("phone").textContent = cv.personal.phone;
-    document.getElementById("email").textContent = cv.personal.email;
-    document.getElementById("ville").textContent = cv.personal.city;
+
+    let lientel = "<img src=\"img/phone.png\" class=\"icone\"/> <a href=\"tel:" + cv.personal.phone + "\">" + cv.personal.phone + "</a>";
+    document.getElementById("phone").innerHTML = lientel;
+
+    let lienmail = "<img src=\"img/mail.png\" class=\"icone\"/> <a href=\"mailto:info@votre-site.fr\">" + cv.personal.email + "</a>";
+    document.getElementById("email").innerHTML = lienmail;
+
+    let lienadresse = "<img src=\"img/address.png\" class=\"icone\"/>" + cv.personal.city;
+    document.getElementById("ville").innerHTML = lienadresse;
 
     //Partie description
     afficheDescription(cv.profile);
@@ -88,16 +94,15 @@ function afficheCompetences(skills) {
         const element = document.createElement("div");
 
         //Si on a besoin de rajouter une classe pour le style 
-        //element.classList.add("skill");
+        element.classList.add("skill");
 
-        element.textContent = skill.name + " - " + skill.level;
+        //element.textContent = skill.name + " - " + skill.level;
 
-        /*
-        //Si je veux rajouter du html
         element.innerHTML = `
             <strong>${skill.name}</strong>
             <span>${skill.level}</span>
-        `;*/ 
+        `;
+
         container.appendChild(element);
     });
 }
@@ -155,6 +160,8 @@ function afficheExperiences(experiences) {
         `;
 
         const technologies = element.querySelector(".technologies");
+        technologies.classList.add("skill");
+
 
         experience.technologies.forEach(function(technology) {
 
@@ -186,11 +193,11 @@ function afficheProjets(projets) {
 
             <p>${project.description}</p>
 
-            <div class="technologies"></div>
+            <div id="technologies" class="blocElements"></div>
         `;
 
-        // On récupère la div "technologies" que l'on vient de créer
-        const technologies = element.querySelector(".technologies");
+        // On récupère la div "technologies" que l'on vient de créer (. pour récupérer classe, # pour id)
+        const technologies = element.querySelector("#technologies");
 
         // On parcourt les technologies du projet
         project.technologies.forEach(function(technology) {
@@ -235,7 +242,7 @@ function afficheInterets(interets){
 
         const element = document.createElement("span");
 
-        element.classList.add("interest");
+        element.classList.add("element");
 
         element.textContent = interest;
 
@@ -248,13 +255,20 @@ function ajouterBoutonAfficherMasquer(bouton, contenu) {
     //On ajoute l'EventListener sur le bouton avec notre fonction comme réponse du click
     bouton.addEventListener("click", function() {
         if (contenu.classList.contains("visible")) {
+
+             // Le contenu est visible → on le rend invisible
             contenu.classList.remove("visible");
+            contenu.classList.add("invisible");
+
             bouton.textContent = "+";
             //Si on veut faire avec une image
             //bouton.src = "plus.png";
 
         } else {
+            // Le contenu est invisible → on le rend visible
+            contenu.classList.remove("invisible");
             contenu.classList.add("visible");
+
             bouton.textContent = "−";
             //Si on veut faire avec une image
             //bouton.src = "moins.png";
