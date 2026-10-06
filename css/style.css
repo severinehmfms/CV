@@ -9,6 +9,7 @@ body {
 }
 
 header {  
+
     width: 90%;
     max-width: 90%;
     /*Marges haut, côtés, bas */
@@ -24,8 +25,9 @@ header h2 {
     margin: 10px 0 10px;
     font-weight: normal;
 }
+/*Zone photo et image*/
 .photo{    
-    text-align  :center; /* Pour aligner la photo */
+    text-align  :center;
 }
 img{
     width: 40%;
@@ -55,6 +57,12 @@ aside {
     /*width: 70%;*/
     text-align:left;
     flex: 7;
+
+    /*background: #F5F5F5;*/
+    padding: 15px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 main {
@@ -121,11 +129,17 @@ section h2 {
     border-radius: 5px;
 }
 
-/*Partie Centres d'intérêts*/
+/*Partie Centres d'intérêts, Technologies... parties ou je souhaite faire des petits blocs*/
 .blocElements {
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
+}
+.blocElementsVerticaux {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
 }
 .element {
     background: #263238;

@@ -155,18 +155,17 @@ function afficheExperiences(experiences) {
             </p>
 
             <p>${experience.description}</p>
-
-            <div class="technologies"></div>
+            <div><div id="technologies"></div></div>
+            
         `;
 
-        const technologies = element.querySelector(".technologies");
-        technologies.classList.add("skill");
+        const technologies = element.querySelector("#technologies");
+        technologies.classList.add("blocElements");
 
 
         experience.technologies.forEach(function(technology) {
-
             technologies.innerHTML += `
-                <span>${technology}</span>
+                <span class="element">${technology}</span>
             `;
 
         });
@@ -204,7 +203,7 @@ function afficheProjets(projets) {
 
             // On ajoute un <span> pour chaque technologie
             technologies.innerHTML += `
-                <span>${technology}</span>
+                <span class="element">${technology}</span>
             `;
 
         });
