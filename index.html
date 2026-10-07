@@ -14,37 +14,31 @@
         </div>
         <div class = "bande-droite">     
             <div class="identite">
-                <h1 id="nom"></h1>
-                <p id="titre"></p>
-                
-            </div>
-            <!--<div id="contact" class="contact panneau-menu">
-                <p id="email"></p>
-                <p id="phone"></p>
-                <p id="ville"></p>
-            </div>-->
-
-            <section id="contact" class="contact panneau-menu">
-                <div class="contact-infos">
-                    <p id="email"></p>
-                    <p id="phone"></p>
-                    <p id="ville"></p>
+                <div>
+                    <h1 id="nom"></h1>
+                    <p id="titre"></p>
                 </div>
+                <!-- <img src="img/mail.png" class="icone-contact">-->                          
                 <button class="bouton-contact" data-cible="contact">
-                    Contact
+                    ✉ Me contacter
                 </button>
-            </section>
+            </div>
+            
+                <div id="contact" class="contact panneau-menu">
+                    <div class="contact-infos">
+                        <p id="email"></p>
+                        <p id="phone"></p>
+                        <p id="ville"></p>
+                    </div>
+                </div>
 
             <nav class="navigation">
-            <button data-cible="description">Présentation</button>
+            <button data-cible="description" class="actif">Présentation</button>
             <button data-cible="experiences">Expériences</button>
             <button data-cible="formations">Formations</button>
             <button data-cible="projets">Projets</button>
             </nav>
         </div>
-
-        
-
     </header>
 
     <main class = "style-flex">
@@ -77,7 +71,7 @@
                 <div class="titre-section">
                     <h2>Présentation</h2>
                 </div>
-                <div id="description" class="panneau-menu"></div>
+                <div id="description" class="panneau-menu actif"></div>
             </section>
 
             <section id="section-experiences">

@@ -112,11 +112,27 @@ section h2 {
     display: none;
 }
 
-/*Partie Contact et icônes*/
-.icone{
-    width:20px;
-    height: auto;
+/*Rendre jolis les liens*/
+a {
+    color: #263238;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s;
 }
+
+a:hover {
+    opacity: 0.7;
+}
+
+/* Identité */
+.identite {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+/*Contact*/
 .contact {
     background: #F5F5F5;
     padding: 15px;
@@ -136,35 +152,30 @@ section h2 {
     gap: 8px;
     margin: 0;
 }
-.bouton-contact.actif {
-    background: #263238;
-    color: white;
-}
+/*Bouton pour afficher le contact*/
 .bouton-contact {
-    border: none;
-    background: transparent;
-
-    padding: 8px 15px;
-
+    border: 1px solid #263238;
+    background: white;
+    color: #263238;
+    padding: 10px 18px;
+    border-radius: 25px;
     font-family: inherit;
     font-size: 15px;
-
     cursor: pointer;
-
-    color: #263238;
-    border-radius: 20px;
-
     transition: 0.2s;
+    white-space: nowrap;
 }
 
-.bouton-contact:hover {
-    background: #263238;
-    color: white;
-}
-
+.bouton-contact:hover,
 .bouton-contact.actif {
     background: #263238;
     color: white;
+}
+
+/*Classe pour affichage de petits icônes*/
+.icone{
+    width:20px;
+    height: auto;
 }
 
 /*Partie langues */

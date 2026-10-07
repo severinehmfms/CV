@@ -34,7 +34,7 @@ async function main() {
     let lientel = "<img src=\"img/phone.png\" class=\"icone\"/> <a href=\"tel:" + cv.personal.phone + "\"> Me téléphoner </a>";
     document.getElementById("phone").innerHTML = lientel;
 
-    let lienmail = "<img src=\"img/mail.png\" class=\"icone\"/> <a href=\"mailto:info@votre-site.fr\"> M'envoyer un mail </a>";
+    let lienmail = "<img src=\"img/mail.png\" class=\"icone\"/> <a href=\"mailto:" + cv.personal.email + "\"> M'envoyer un mail </a>";
     document.getElementById("email").innerHTML = lienmail;
 
     let lienadresse = "<img src=\"img/address.png\" class=\"icone\"/>" + cv.personal.city;
@@ -76,9 +76,12 @@ async function main() {
         document.getElementById("interets")
     );
 
+    //Panneau de navigation
     const boutons = document.querySelectorAll(".navigation button");
-    const boutonContact = document.querySelector(".bouton-contact");
     const panneaux = document.querySelectorAll(".panneau-menu");
+
+    //Bouton contact désolidarisé des autres
+    const boutonContact = document.querySelector(".bouton-contact");
 
     boutons.forEach(function(bouton) {
         bouton.addEventListener("click", function() {
@@ -93,8 +96,6 @@ async function main() {
                 b.classList.remove("actif");
             });
 
-            boutonContact.classList.remove("actif");
-
             document.getElementById(cible).classList.add("actif");
             bouton.classList.add("actif");
         });
@@ -102,19 +103,16 @@ async function main() {
 
     boutonContact.addEventListener("click", function() {
 
-        const cible = boutonContact.dataset.cible;
+        const contact = document.getElementById("contact");
 
-        panneaux.forEach(function(panneau) {
-            panneau.classList.remove("actif");
-        });
+        if (contact.classList.contains("actif")) {
+            contact.classList.remove("actif");
+            boutonContact.classList.remove("actif");
+        } else {
+            contact.classList.add("actif");
+            boutonContact.classList.add("actif");
+        }
 
-        boutons.forEach(function(bouton) {
-            bouton.classList.remove("actif");
-        });
-
-        boutonContact.classList.add("actif");
-
-        document.getElementById(cible).classList.add("actif");
     });
 }
 //Fonctions pour charger les éléments suivant le type (pour réduire un peu le main)
