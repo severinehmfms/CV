@@ -5,7 +5,7 @@
 
 body {
 	line-height: 1;
-    background: #DCDCDC;
+    background: white;
 }
 
 header {  
@@ -59,17 +59,17 @@ aside {
     flex: 7;
 
     /*background: #F5F5F5;*/
-    padding: 15px;
+    /*padding: 15px;
     margin-bottom: 25px;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);*/
 }
 
 main {
     width: 90%;
     max-width: 90%;
 
-    padding-top: 10px;
+    /*padding-top: 10px;*/
     margin: 0 auto;
 }
 
@@ -93,15 +93,22 @@ section h2 {
     cursor: pointer;
 }
 
-#formations.visible,
-#experiences.visible,
-#projets.visible {
+/* Gestion de l'affichage avec les boutons + et - */
+#competences.visible {
+    display: grid;
+}
+
+#langues.visible {
     display: block;
 }
 
-#formations.invisible,
-#experiences.invisible,
-#projets.invisible {
+#interets.visible {
+    display: flex;
+}
+
+#competences.invisible,
+#langues.invisible,
+#interets.invisible {
     display: none;
 }
 
@@ -110,9 +117,78 @@ section h2 {
     width:20px;
     height: auto;
 }
-.contact{
+.contact {
+    background: #F5F5F5;
+    padding: 15px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+.contact-infos {
     display: flex;
-    gap: 50px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+.contact-infos p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+}
+.bouton-contact.actif {
+    background: #263238;
+    color: white;
+}
+.bouton-contact {
+    border: none;
+    background: transparent;
+
+    padding: 8px 15px;
+
+    font-family: inherit;
+    font-size: 15px;
+
+    cursor: pointer;
+
+    color: #263238;
+    border-radius: 20px;
+
+    transition: 0.2s;
+}
+
+.bouton-contact:hover {
+    background: #263238;
+    color: white;
+}
+
+.bouton-contact.actif {
+    background: #263238;
+    color: white;
+}
+
+/*Partie langues */
+.langues-liste {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.langue {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 8px 10px;
+
+    background: white;
+    border-radius: 5px;
+}
+.langue span {
+    font-size: 14px;
+    color: #666;
+}
+.langue strong {
+    color: #263238;
 }
 
 /*Partie Compétences*/
@@ -129,7 +205,7 @@ section h2 {
     border-radius: 5px;
 }
 
-/*Partie Centres d'intérêts, Technologies... parties ou je souhaite faire des petits blocs*/
+/*Partie Centres d'intérêts, Technologies... parties ou je souhaite faire des petits blocs jolis*/
 .blocElements {
     display: flex;
     gap: 10px;
@@ -147,4 +223,52 @@ section h2 {
     padding: 5px 10px;
     border-radius: 15px;
     font-size: 14px;
+}
+
+/*
+Pour le menu dynamique en haut
+*/
+.panneau-menu {
+    display: none;
+}
+
+.panneau-menu.actif {
+    display: block;
+}
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    margin-top: 20px;
+    padding-top: 12px;
+
+    border-top: 1px solid #ddd;
+}
+
+.navigation button {
+    border: none;
+    background: transparent;
+
+    padding: 8px 15px;
+
+    font-family: inherit;
+    font-size: 15px;
+
+    cursor: pointer;
+
+    color: #263238;
+    border-radius: 20px;
+
+    transition: 0.2s;
+}
+
+.navigation button:hover {
+    background: #263238;
+    color: white;
+}
+
+.navigation button.actif {
+    background: #263238;
+    color: white;
 }

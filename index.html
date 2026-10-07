@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>CV - Séverine NOM</title>
+    <title>CV - Séverine TEST</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -16,28 +16,59 @@
             <div class="identite">
                 <h1 id="nom"></h1>
                 <p id="titre"></p>
+                
             </div>
-            <div class="contact">
+            <!--<div id="contact" class="contact panneau-menu">
                 <p id="email"></p>
                 <p id="phone"></p>
                 <p id="ville"></p>
-            </div>
+            </div>-->
+
+            <section id="contact" class="contact panneau-menu">
+                <div class="contact-infos">
+                    <p id="email"></p>
+                    <p id="phone"></p>
+                    <p id="ville"></p>
+                </div>
+                <button class="bouton-contact" data-cible="contact">
+                    Contact
+                </button>
+            </section>
+
+            <nav class="navigation">
+            <button data-cible="description">Présentation</button>
+            <button data-cible="experiences">Expériences</button>
+            <button data-cible="formations">Formations</button>
+            <button data-cible="projets">Projets</button>
+            </nav>
         </div>
+
+        
+
     </header>
 
     <main class = "style-flex">
         <aside>            
             <section id="section-competences">
-                <h2>Compétences</h2>
-                <div id="competences"></div>
+                <h2>
+                    Compétences
+                    <span id="bouton-competences" class="classe-bouton">-</span>
+                </h2>
+                <div id="competences" class="visible"></div>
             </section>
             <section id="section-langues">
-                <h2>Langues</h2>
-                <div id="langues"></div>
+                <h2>
+                    Langues
+                    <span id="bouton-langues" class="classe-bouton">-</span>
+                </h2>
+                <div id="langues" class="visible"></div>
             </section>
             <section id="section-interets">
-                <h2>Centres d'intérêts</h2>
-                <div id="interets" class="blocElementsVerticaux"></div>
+                <h2>
+                    Centres d'intérêts
+                    <span id="bouton-interets" class="classe-bouton">-</span>
+                </h2>
+                <div id="interets" class="visible blocElementsVerticaux"></div>
             </section>    
         </aside>       
 
@@ -46,34 +77,34 @@
                 <div class="titre-section">
                     <h2>Présentation</h2>
                 </div>
-                <div id="description"></div>
-            </section>
-
-            <section id="section-formations">
-                <div class="titre-section">
-                    <h2>Formations <span id="bouton-formations" class="classe-bouton">-</span></h2>
-                </div>
-                <div id="formations" class="visible"></div>            
+                <div id="description" class="panneau-menu"></div>
             </section>
 
             <section id="section-experiences">
                 <div class="titre-section">
-                    <h2>Expériences <span id="bouton-experiences" class="classe-bouton">-</span></h2>
+                    <h2>Expériences</h2>
                 </div>
-                <div id="experiences" class="visible"></div>
+                <div id="experiences" class="panneau-menu"></div>
             </section>
+
+            <section id="section-formations">
+                <div class="titre-section">
+                    <h2>Formations</h2>
+                </div>
+                <div id="formations" class="panneau-menu"></div>            
+            </section>            
             
             <section id="section-projets">
                 <div class="titre-section">
-                    <h2>Projets <span id="bouton-projets" class="classe-bouton">-</span></h2>
+                    <h2>Projets</h2>
                 </div>                
-                <div id="projets" class="visible"></div>
+                <div id="projets" class="panneau-menu"></div>
             </section>
         </div>
     </main>
 
     <footer>
-        <p>© 2026 Séverine HM</p>
+        <p>© 2026 Séverine TEST</p>
     </footer>
     <script src="js/script.js"></script>
 </body>

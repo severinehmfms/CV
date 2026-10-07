@@ -31,10 +31,10 @@ async function main() {
     document.getElementById("nom").textContent = `${cv.personal.firstName} ${cv.personal.lastName}`;
     document.getElementById("titre").textContent = cv.personal.jobTitle;
 
-    let lientel = "<img src=\"img/phone.png\" class=\"icone\"/> <a href=\"tel:" + cv.personal.phone + "\">" + cv.personal.phone + "</a>";
+    let lientel = "<img src=\"img/phone.png\" class=\"icone\"/> <a href=\"tel:" + cv.personal.phone + "\"> Me téléphoner </a>";
     document.getElementById("phone").innerHTML = lientel;
 
-    let lienmail = "<img src=\"img/mail.png\" class=\"icone\"/> <a href=\"mailto:info@votre-site.fr\">" + cv.personal.email + "</a>";
+    let lienmail = "<img src=\"img/mail.png\" class=\"icone\"/> <a href=\"mailto:info@votre-site.fr\"> M'envoyer un mail </a>";
     document.getElementById("email").innerHTML = lienmail;
 
     let lienadresse = "<img src=\"img/address.png\" class=\"icone\"/>" + cv.personal.city;
@@ -62,21 +62,61 @@ async function main() {
     afficheInterets(cv.interests);
     
     ajouterBoutonAfficherMasquer(
-        document.getElementById("bouton-formations"),
-        document.getElementById("formations")
+        document.getElementById("bouton-competences"),
+        document.getElementById("competences")
     );
 
     ajouterBoutonAfficherMasquer(
-        document.getElementById("bouton-experiences"),
-        document.getElementById("experiences")
+        document.getElementById("bouton-langues"),
+        document.getElementById("langues")
     );
 
     ajouterBoutonAfficherMasquer(
-        document.getElementById("bouton-projets"),
-        document.getElementById("projets")
+        document.getElementById("bouton-interets"),
+        document.getElementById("interets")
     );
+
+    const boutons = document.querySelectorAll(".navigation button");
+    const boutonContact = document.querySelector(".bouton-contact");
+    const panneaux = document.querySelectorAll(".panneau-menu");
+
+    boutons.forEach(function(bouton) {
+        bouton.addEventListener("click", function() {
+
+            const cible = bouton.dataset.cible;
+
+            panneaux.forEach(function(panneau) {
+                panneau.classList.remove("actif");
+            });
+
+            boutons.forEach(function(b) {
+                b.classList.remove("actif");
+            });
+
+            boutonContact.classList.remove("actif");
+
+            document.getElementById(cible).classList.add("actif");
+            bouton.classList.add("actif");
+        });
+    });
+
+    boutonContact.addEventListener("click", function() {
+
+        const cible = boutonContact.dataset.cible;
+
+        panneaux.forEach(function(panneau) {
+            panneau.classList.remove("actif");
+        });
+
+        boutons.forEach(function(bouton) {
+            bouton.classList.remove("actif");
+        });
+
+        boutonContact.classList.add("actif");
+
+        document.getElementById(cible).classList.add("actif");
+    });
 }
-
 //Fonctions pour charger les éléments suivant le type (pour réduire un peu le main)
 //Fonction qui met la description dans le sélecteur ayant pour id description
 function afficheDescription(profile) {
@@ -155,11 +195,10 @@ function afficheExperiences(experiences) {
             </p>
 
             <p>${experience.description}</p>
-            <div><div id="technologies"></div></div>
-            
+            <div><div class="technologies"></div></div>
         `;
 
-        const technologies = element.querySelector("#technologies");
+        const technologies = element.querySelector(".technologies");
         technologies.classList.add("blocElements");
 
 
@@ -192,11 +231,11 @@ function afficheProjets(projets) {
 
             <p>${project.description}</p>
 
-            <div id="technologies" class="blocElements"></div>
+            <div class="technologies" class="blocElements"></div>
         `;
 
         // On récupère la div "technologies" que l'on vient de créer (. pour récupérer classe, # pour id)
-        const technologies = element.querySelector("#technologies");
+        const technologies = element.querySelector(".technologies");
 
         // On parcourt les technologies du projet
         project.technologies.forEach(function(technology) {
@@ -217,15 +256,19 @@ function afficheProjets(projets) {
 function afficheLangues(langues){
     const container = document.querySelector("#langues");
 
-    const list = document.createElement("ul");
+    //const list = document.createElement("ul");
+    const list = document.createElement("div");
+    list.classList.add("langues-liste");
 
     langues.forEach(language => {
 
-        const item = document.createElement("li");
+        //const item = document.createElement("li");
+        const item = document.createElement("div");
+        item.classList.add("langue");
 
         item.innerHTML = `
-            <strong>${language.name}</strong> :
-            ${language.level}
+            <strong>${language.name}</strong>
+            <span>${language.level}</span>
         `;
 
         list.appendChild(item);
