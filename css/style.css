@@ -261,13 +261,19 @@ a:hover {
 /*
 Pour le menu dynamique en haut
 */
+
 .panneau-menu {
     display: none;
+}
+
+.panneau-menu-min {
+    min-height: 250px; /*150px → assez compact , 200px → équilibré, 250px → plus aéré*/
 }
 
 .panneau-menu.actif {
     display: block;
 }
+
 .navigation {
     display: flex;
     justify-content: center;
@@ -304,4 +310,29 @@ Pour le menu dynamique en haut
 .navigation button.actif {
     background: #DBCCDE; /*#263238;*/
     color: white;
+}
+
+/*Affichage des dates*/
+.date {
+    display: inline-block;
+    margin: 5px 0 10px;
+    padding: 5px 10px;
+/*
+    background: #263238;
+    color: white;
+
+    border-radius: 15px;*/
+    font-size: 13px;
+}
+
+.titre-experience {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titre-formation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

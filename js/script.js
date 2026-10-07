@@ -155,16 +155,17 @@ function afficheFormations(formations) {
 
         //On va fabriquer le code html pour chaque formation, avec les éléments récupérés du JSON.
         element.innerHTML = `
+            
+
+            <div class="titre-formation">
             <h3>${item.degree}</h3>
-
-            <p class="company">
-                ${item.school} - ${item.location}
-            </p>
-
             <p class="date">
-                ${item.startDate} - ${item.endDate}
+                ${formatDate(item.startDate)}
+                    —
+                ${formatDate(item.endDate)}
             </p>
-
+            </div>
+            ${item.school} - ${item.location}
             <p>${item.description}</p>
         `;
 
@@ -182,16 +183,13 @@ function afficheExperiences(experiences) {
         const element = document.createElement("article");
 
         element.innerHTML = `
-            <h3>${experience.position}</h3>
-
+            <div class="titre-experience">
+                <h3>${experience.position}</h3>
+                <p class="date">  ${formatDate(experience.startDate)} — ${formatDate(experience.endDate)}  </p>
+            </div>
             <p class="company">
-                ${experience.company} - ${experience.location}
+                ${experience.company} - ${experience.location} 
             </p>
-
-            <p class="date">
-                ${experience.startDate} - ${experience.endDate ?? "Aujourd'hui"}
-            </p>
-
             <p>${experience.description}</p>
             <div><div class="technologies"></div></div>
         `;
@@ -314,6 +312,28 @@ function ajouterBoutonAfficherMasquer(bouton, contenu) {
             //bouton.src = "moins.png";
         }
     });
+}
+
+function formatDate(date) {
+
+    if (!date) {
+        return "Aujourd'hui";
+    }
+
+    // Si seule l'année est renseignée
+    if (!date.includes("-")) {
+        return date;
+    }
+
+    const [annee, mois] = date.split("-");
+
+    const moisNoms = [
+        "Janvier", "Février", "Mars", "Avril",
+        "Mai", "Juin", "Juillet", "Août",
+        "Septembre", "Octobre", "Novembre", "Décembre"
+    ];
+
+    return `${moisNoms[parseInt(mois) - 1]} ${annee}`;
 }
 
 main();
